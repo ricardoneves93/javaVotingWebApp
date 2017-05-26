@@ -10,11 +10,10 @@ public class Poll {
 	public String id;
 	public String pollQuestion;
 	public String pollName;
-	
-	List<String> options;
-	
 	public String viewHash;
 	public String voteHash;
+	
+	public List<String> options;
 
 	public Poll(String pollQuestion, String pollName, List<String> options) {
 		this.pollQuestion = pollQuestion;

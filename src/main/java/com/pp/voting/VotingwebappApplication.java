@@ -1,22 +1,14 @@
 package com.pp.voting;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import com.pp.voting.entities.Poll;
-import com.pp.voting.entities.PollOption;
 import com.pp.voting.repositories.PollOptionRepository;
 import com.pp.voting.repositories.PollRepository;
 
 @SpringBootApplication
-public class VotingwebappApplication implements CommandLineRunner {
+public class VotingwebappApplication/* implements CommandLineRunner */{
 	
 	@Autowired
 	PollRepository pollRepository;
@@ -28,6 +20,7 @@ public class VotingwebappApplication implements CommandLineRunner {
 		SpringApplication.run(VotingwebappApplication.class, args);
 	}
 
+	/*
 	@Override
 	public void run(String... arg0) throws Exception {
 		
@@ -57,8 +50,8 @@ public class VotingwebappApplication implements CommandLineRunner {
 		pollRepository.save(poll2);
 		
 		System.out.println("Query result: " + pollRepository.findPollByPollName("Dinner of tuesday"));
-		
-		
-		
+	
 	}
+	
+	*/
 }
