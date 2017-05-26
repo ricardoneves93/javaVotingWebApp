@@ -1,8 +1,6 @@
 package com.pp.voting.entities;
 
-import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 
 import org.springframework.data.annotation.Id;
 
@@ -11,30 +9,19 @@ public class Poll {
 	public String id;
 	public String ownerName;
 	public String pollName;
-	public String pollQuestion;
 	
-	Map<String, List<User>> options;
-	
-	public String viewHash;
-	
-	public String voteHash;
-	
-	public String editHash;
+	Map<String, Integer> options;
 
-	public Poll(String ownerName, String pollName, String pollQuestion, Map<String, List<User>> options) {
+	public Poll(String ownerName, String pollName, Map<String, Integer> options) {
 		this.ownerName = ownerName;
 		this.pollName = pollName;
-		this.pollQuestion = pollQuestion;
 		this.options = options;
-		this.viewHash = UUID.randomUUID().toString();
-		this.voteHash = UUID.randomUUID().toString();
-		this.editHash = UUID.randomUUID().toString();
 	}
 
 	@Override
 	public String toString() {
-		return "Poll [id=" + id + ", ownerName=" + ownerName + ", pollName=" + pollName + ", pollQuestion="
-				+ pollQuestion + ", options=" + options + ", viewHash=" + viewHash + ", voteHash=" + voteHash
-				+ ", editHash=" + editHash + "]";
+		return "Poll [id=" + id + ", ownerName=" + ownerName + ", pollName=" + pollName + ", options=" + options + "]";
 	}
+
+	
 }
